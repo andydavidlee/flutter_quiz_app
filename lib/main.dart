@@ -15,21 +15,42 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('First App'),
-        ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        body: Container(
+          color: Colors.deepPurple,
+          child: Center(
+              child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                'Hello World!',
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+                child: Image.asset(
+                  'assets/images/quiz-logo.png',
+                  width: 300,
+                  height: 300,
+                ),
               ),
-              Text(
-                'It\'s time to learn Flutter!',
+              const Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 50),
+                child: Text(
+                  'Learn Flutter the fun way!',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const OutlinedButton(
+                onPressed: null,
+                child: Text(
+                  'Start Quiz',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ],
-          ),
+          )),
         ),
       ),
     );
